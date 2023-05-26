@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './Layout/Layout';
 
 const Home = lazy(() => import('./pages/Home'));
-const Contacts = lazy(() => import('./pages/Contact'));
+// const Contacts = lazy(() => import('./pages/Contact'));
 const Login = lazy(() => import('./pages/LoginPage'));
 const Registration = lazy(() => import('./pages/RegistrationPage'));
 
