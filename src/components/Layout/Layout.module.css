@@ -20,20 +20,6 @@
   display: flex;
 }
 
-.HeaderRegister {
-  display: flex;
-}
-
-.HeaderPageHome {
-  margin-right: 15px;
-}
-
 .HeaderPageContacts {
-}
-
-.HeaderRegisterLogin {
-  margin-right: 15px;
-}
-
-.HeaderRegisterSignUp {
+  margin-left: 0px;
 }
