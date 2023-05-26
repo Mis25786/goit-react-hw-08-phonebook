@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[493],{5493:function(e,o,t){t.r(o);var r=t(184);o.default=function(){return(0,r.jsxs)("ul",{children:[(0,r.jsx)("h3",{children:"Welcome to our website"}),(0,r.jsx)("h4",{children:"Here you can create your contact book"}),(0,r.jsx)("h4",{children:"To do this, you need to register or log in to your account"})]})}}}]);
+//# sourceMappingURL=493.fbb30af6.chunk.js.map
