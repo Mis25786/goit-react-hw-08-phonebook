@@ -21,7 +21,7 @@ const Layout = () => {
             <NavLink to="/login">Log In</NavLink>
           </button>
           <button className={css['HeaderRegisterSignUp']}>
-            <NavLink to="/signUp">Sign Up</NavLink>
+            <NavLink to="/signUp">Register</NavLink>
           </button>
         </div>
       </ul>
