@@ -9,9 +9,9 @@ const setAuthHeader = token => {
 };
 
 //* Utility to remove JWT
-const clearAuthHeader = () => {
-  axios.defaults.headers.common.Authorization = '';
-};
+// const clearAuthHeader = () => {
+//   axios.defaults.headers.common.Authorization = '';
+// };
 
 //* POST /users/signup
 //* body: {name, email, password}

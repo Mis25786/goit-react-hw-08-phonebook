@@ -4,6 +4,7 @@ import css from './Navigation.module.css';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();
+  console.log(isLoggedIn);
 
   return (
     <nav className={css['HeaderNav']}>
@@ -14,8 +15,8 @@ export const Navigation = () => {
         <NavLink to="/contacts">Contacts</NavLink>
       </div>
       {/* {isLoggedIn && (
-        <NavLink className={css.link} to="/tasks">
-          Tasks
+        <NavLink csclassName="" to="/contacts">
+          Contacts
         </NavLink>
       )} */}
     </nav>

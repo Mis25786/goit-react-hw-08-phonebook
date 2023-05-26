@@ -1,8 +1,8 @@
 import { Suspense } from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Loader from './../Loader/Loader';
-import { useAuth } from './../hooks/useAuth';
+// import { useAuth } from './../hooks/useAuth';
 import css from './Layout.module.css';
 import { AuthNav } from 'components/AuthNav/AuthNav';
 import { Navigation } from 'components/Navigation/Navigation';
