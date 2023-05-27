@@ -1,17 +1,9 @@
-// import { useEffect } from 'react';
-// import { loginThunk } from '../../store/auth/thunk';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { login } from 'redux/auth/operations';
 
 const Login = () => {
-  //   const isAuth = useSelector(state => state.auth.access_token);
   const dispatch = useDispatch();
-  //   const navigate = useNavigate();
-
-  //   useEffect(() => {
-  //     isAuth && navigate('/');
-  //   }, [isAuth, navigate]);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -26,13 +18,6 @@ const Login = () => {
     );
 
     form.reset();
-
-    //     dispatch(
-    //       loginThunk({
-    //         email: e.target.elements.email.value,
-    //         password: e.target.elements.password.value,
-    //       })
-    //     );
   };
 
   return (
@@ -78,9 +63,6 @@ const Login = () => {
           <button type="submit" className="btn btn-primary">
             Login
           </button>
-          {/* <Link to="/signUp" className="m-3">
-            Sign Up
-          </Link> */}
         </form>
       </div>
     </>

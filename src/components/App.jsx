@@ -29,7 +29,6 @@ export const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          {/* <Route path="/contacts" element={<Contacts />} /> */}
           <Route
             path="contacts"
             element={
@@ -48,7 +47,6 @@ export const App = () => {
               <PublicRoute component={<Registration />} redirectTo="/login" />
             }
           />
-          {/* <Route path="signUp" element={<Registration />} /> */}
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
