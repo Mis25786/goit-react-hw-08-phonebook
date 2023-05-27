@@ -1,19 +1,19 @@
-// import { useDispatch } from 'react-redux';
-// import { logOut } from 'redux/auth/operations';
+import { useDispatch } from 'react-redux';
+import { logOut } from 'redux/auth/operations';
 import { useAuth } from 'components/hooks/useAuth';
 import css from './UserMenu.module.css';
 
 export const UserMenu = () => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { user } = useAuth();
 
   return (
     <div className={css.wrapper}>
       <p className={css.username}>Welcome, {user.name}</p>
-      <button type="button">Logout</button>
-      {/* <button type="button" onClick={() => dispatch(logOut())}>
+      {/* <button type="button">Logout</button> */}
+      <button type="button" onClick={() => dispatch(logOut())}>
         Logout
-      </button> */}
+      </button>
     </div>
   );
 };

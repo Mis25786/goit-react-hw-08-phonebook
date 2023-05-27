@@ -9,9 +9,9 @@ const setAuthHeader = token => {
 };
 
 //* Utility to remove JWT
-// const clearAuthHeader = () => {
-//   axios.defaults.headers.common.Authorization = '';
-// };
+const clearAuthHeader = () => {
+  axios.defaults.headers.common.Authorization = '';
+};
 
 //* POST /users/signup
 //* body: {name, email, password}
@@ -20,14 +20,9 @@ export const register = createAsyncThunk(
   async (credentials, thunkAPI) => {
     try {
       const res = await axios.post('users/signup', credentials);
-      console.log('res :>> ', res);
       setAuthHeader(res.data.token);
-      //   console.log(
-      //     'setAuthHeader(res.data.token) :>> ',
-      //     setAuthHeader(res.data.token)
-      //   );
+
       return res.data;
-      //   console.log('res.data :>> ', res.data);
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -38,15 +33,28 @@ export const register = createAsyncThunk(
 //* body: {email, password}
 export const login = createAsyncThunk(
   'auth/login',
-  async (credentials, thunkAPI) => {}
+  async (credentials, thunkAPI) => {
+    try {
+      const res = await axios.post('users/login', credentials);
+      setAuthHeader(res.data.token);
+
+      return res.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error.message);
+    }
+  }
 );
 
 //* POST /users/logut
 //* headers: Authorization: Bearer token
-export const logOut = createAsyncThunk(
-  'auth/logout',
-  async (_, thunkAPI) => {}
-);
+export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
+  try {
+    await axios.post('users/logout');
+    clearAuthHeader();
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error.message);
+  }
+});
 
 //* GET /users/me
 //* headers: Authorization: Bearer token

@@ -1,11 +1,12 @@
 // import { useEffect } from 'react';
 // import { loginThunk } from '../../store/auth/thunk';
-// import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { login } from 'redux/auth/operations';
 
 const Login = () => {
   //   const isAuth = useSelector(state => state.auth.access_token);
-  //   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   //   const navigate = useNavigate();
 
   //   useEffect(() => {
@@ -14,6 +15,18 @@ const Login = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
+
+    const form = e.currentTarget;
+
+    dispatch(
+      login({
+        email: form.elements.email.value,
+        password: form.elements.password.value,
+      })
+    );
+
+    form.reset();
+
     //     dispatch(
     //       loginThunk({
     //         email: e.target.elements.email.value,
