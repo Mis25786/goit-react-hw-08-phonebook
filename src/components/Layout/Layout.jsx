@@ -10,6 +10,7 @@ const Layout = () => {
   return (
     <main>
       <AppBar />
+
       <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
