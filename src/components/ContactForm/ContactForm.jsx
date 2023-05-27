@@ -68,7 +68,7 @@ const ContactForm = () => {
         />
       </label>
 
-      <button className={css['btn-add']}>Add contact</button>
+      <button className="btn btn-outline-primary">Add contact</button>
     </form>
   );
 };

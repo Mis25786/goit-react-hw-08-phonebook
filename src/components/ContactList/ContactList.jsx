@@ -28,7 +28,8 @@ const ContactList = () => {
 
           <button
             onClick={() => dispatch(deleteContact(id))}
-            className={css['ContactList-delete']}
+            type="button"
+            className="btn btn-outline-danger"
           >
             delete
           </button>

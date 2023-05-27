@@ -1,7 +1,7 @@
 import { Registration } from 'components/Registration/Registration';
 import React from 'react';
 
-export const RegistrationPage = () => {
+const RegistrationPage = () => {
   return <Registration />;
 };
 

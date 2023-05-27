@@ -24,7 +24,7 @@ export const Registration = () => {
   return (
     <>
       <div className="container">
-        <Link to="/" className="btn btn-success mt-5">
+        <Link to="/" type="button" className="btn btn-outline-primary">
           Go Home
         </Link>
       </div>
@@ -32,7 +32,7 @@ export const Registration = () => {
         className="card position-absolute top-50 start-50 translate-middle p-2"
         style={{ minWidth: '350px' }}
       >
-        <h1 className="text-center">REGISTER</h1>
+        <h1 className="text-center">Register</h1>
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -75,7 +75,7 @@ export const Registration = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-outline-primary">
             Register
           </button>
         </form>

@@ -1,15 +1,15 @@
 import { NavLink } from 'react-router-dom';
-import css from './AuthNav.module.css';
 
 export const AuthNav = () => {
   return (
-    <div className={css['HeaderRegister']}>
-      <button className={css['HeaderRegisterLogin']}>
-        <NavLink to="/login">Log In</NavLink>
-      </button>
-      <button className={css['HeaderRegisterSignUp']}>
-        <NavLink to="/signUp">Register</NavLink>
-      </button>
+    <div className="btn-group" role="group" aria-label="Basic example">
+      <NavLink to="/login" type="button" className="btn btn-outline-primary">
+        Log In
+      </NavLink>
+
+      <NavLink to="/signUp" type="button" className="btn btn-outline-primary">
+        Register
+      </NavLink>
     </div>
   );
 };

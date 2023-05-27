@@ -22,7 +22,7 @@ export const Contacts = () => {
       <div className={css.phonebook}>
         {error && <h2>An error occurred, please restart the application!!!</h2>}
 
-        <h1 className={css['phonebook-title']}>Phonebook</h1>
+        <h1>Phonebook</h1>
 
         {!error && <ContactForm />}
 
@@ -35,7 +35,7 @@ export const Contacts = () => {
           <h2>There are no contacts</h2>
         )}
 
-        {isLoading && <h3>Loading...</h3>}
+        {isLoading && <h3>In process...</h3>}
 
         {contacts && !error && <ContactList />}
       </div>

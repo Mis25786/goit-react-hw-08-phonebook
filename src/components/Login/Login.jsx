@@ -23,7 +23,7 @@ const Login = () => {
   return (
     <>
       <div className="container">
-        <Link to="/" className="btn btn-success mt-5">
+        <Link to="/" type="button" className="btn btn-outline-primary">
           Go Home
         </Link>
       </div>
@@ -60,7 +60,7 @@ const Login = () => {
               id="exampleInputPassword1"
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-outline-primary">
             Login
           </button>
         </form>
