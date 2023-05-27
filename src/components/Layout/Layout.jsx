@@ -2,28 +2,20 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Loader from './../Loader/Loader';
-// import { useAuth } from './../hooks/useAuth';
-import css from './Layout.module.css';
-import { AuthNav } from 'components/AuthNav/AuthNav';
-import { Navigation } from 'components/Navigation/Navigation';
+import AppBar from 'components/AppBar/AppBar';
+
+// import css from './Layout.module.css';
 
 const Layout = () => {
-  // const { isLoggedIn } = useAuth(state => state.auth.isLoggedIn);
-  // console.log(isLoggedIn);
-
   return (
-    <div>
-      <div className={css['Header']}>
-        <Navigation />
-        <AuthNav />
-      </div>
-      <main>
-        <Suspense fallback={<Loader />}>
-          <Outlet />
-        </Suspense>
-      </main>
+    <main>
+      <AppBar />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
+
       <ToastContainer autoClose={2000} />
-    </div>
+    </main>
   );
 };
 

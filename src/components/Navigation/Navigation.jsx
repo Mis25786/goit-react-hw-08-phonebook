@@ -3,8 +3,8 @@ import { useAuth } from '../hooks/useAuth';
 import css from './Navigation.module.css';
 
 export const Navigation = () => {
-  const { isLoggedIn } = useAuth();
-  console.log(isLoggedIn);
+  // const { isLoggedIn } = useAuth();
+  // console.log(isLoggedIn);
 
   return (
     <nav className={css['HeaderNav']}>
