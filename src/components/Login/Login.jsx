@@ -1,6 +1,6 @@
 // import { useEffect } from 'react';
 // import { loginThunk } from '../../store/auth/thunk';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { login } from 'redux/auth/operations';
 
